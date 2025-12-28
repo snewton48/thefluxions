@@ -2,12 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Fluxions</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0f172a, #020617);
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      padding: 40px 20px;
+    }
+
+    .logo {
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto 40px;
+      display: block;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #9ca3af;
+      margin-bottom: 50px;
+    }
+
+    .contact {
+      font-size: 1rem;
+      color: #9ca3af;
+    }
+
+    .contact a {
+      color: #e5e7eb;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+      padding-bottom: 2px;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact a:hover {
+      border-color: #e5e7eb;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .tagline {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <img src="A53B52B3-F8BE-4130-AED2-7F926769CC78.png" alt="The Fluxions logo" style="width: 100%; max-width: 750px;">
-  <h1>Beyond Constraint</h1>
-  <p>Thinking past the edge of the possible</p>
-  <p>For more info contact <a href="mailto:steve@thefluxions.co.uk">steve@thefluxions.co.uk</a></p>
+
+  <div class="container">
+    <img 
+      src="A53B52B3-F8BE-4130-AED2-7F926769CC78.png" 
+      alt="The Fluxions logo" 
+      class="logo"
+    >
+
+    <h1>Beyond Constraint</h1>
+    <p class="tagline">Thinking past the edge of the possible</p>
+
+    <p class="contact">
+      For more information contact
+      <a href="mailto:steve@thefluxions.co.uk">steve@thefluxions.co.uk</a>
+    </p>
+  </div>
+
 </body>
 </html>
