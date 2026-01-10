@@ -13,7 +13,6 @@
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #221912;
-      );
       color: #e5e7eb;
       display: flex;
       align-items: center;
@@ -88,6 +87,20 @@
         font-size: 1.05rem;
       }
     }
+
+    /* Subtle visit counter */
+    .visit-counter {
+      position: fixed;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      opacity: 0.35;
+      color: #b8ada3;
+      font-variant-numeric: tabular-nums;
+      pointer-events: none;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
@@ -107,6 +120,24 @@
       <a href="mailto:steve@thefluxions.co.uk">steve@thefluxions.co.uk</a>
     </p>
   </div>
+
+  <!-- Subtle visit counter -->
+  <small
+    id="visit-counter"
+    class="visit-counter"
+    title="Visits from this browser"
+  >
+    …
+  </small>
+
+  <script>
+    const key = "fluxions-visits";
+    const visits = (Number(localStorage.getItem(key)) || 0) + 1;
+    localStorage.setItem(key, visits);
+
+    document.getElementById("visit-counter").textContent =
+      `${visits.toLocaleString()} visits`;
+  </script>
 
 </body>
 </html>
